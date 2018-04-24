@@ -1,5 +1,10 @@
 
 $(document).ready(function(){
+	
+	addEventStopAudio();
+	
+	
+	
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
@@ -27,3 +32,14 @@ $(document).ready(function(){
     } // End if
   });
 })
+
+function addEventStopAudio () {
+	$(".img-circle").click(function (){
+			var tmpAudio = document.getElementById("audioInicio");
+			console.log (tmpAudio);
+			tmpAudio.pause();
+	})
+	
+	
+}
+
