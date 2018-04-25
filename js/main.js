@@ -43,7 +43,7 @@ function addEventStopAudio () {
 			
 		//Crea el objeto audio lo renderiza y abre el modal
 			
-			pathMedio =  $(this).attr("path");
+			var pathMedio =  $(this).attr("path"),
 			typeMedio = $(this).attr("medio"); 
 			
 			if (typeMedio=="audio") {
