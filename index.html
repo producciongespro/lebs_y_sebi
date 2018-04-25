@@ -18,7 +18,7 @@
 
 </head>
 
-<audio id="audioInicio" autoplay src="audio/pista.mp3"> </audio>
+<audio id="audioInicio" autoplay="false" preload="true" src="audio/pista.mp3"> </audio>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <!-- Barra de menú -->
@@ -165,50 +165,41 @@
 
   <div class="row">
     <div class="col-sm-2">
-      <p class="text-center"><strong>1 st term</strong></p><br>
-      <a target="_blank" href="data/setimo/1st-audios/l2_audio.mp3" >
-        <img src="img/iconos/celeste-audio.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
+      <p class="text-center"><strong>1 st term</strong></p><br>      
+        <img medio="audio" path="data/setimo/1st-audios/l2_audio.mp3" src="img/iconos/celeste-audio.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+
       <p>L-2 Audio</p>
     </div>
 
     <div class="col-sm-2">
       <p class="text-center"><strong>1 st term</strong></p><br>
-        <a target="_blank"  href="data/setimo/1st-audios/l5-audio.mp3" >
-        <img src="img\iconos\morado-audio.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
+        
+        <img medio="audio" path="data/setimo/1st-audios/l5-audio.mp3"  src="img\iconos\morado-audio.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      
       <p>L-5 Audio</p>
     </div>
 
     <div class="col-sm-2">
-      <p class="text-center"><strong>1 st term</strong></p><br>
-      <a target="_blank"  href="data/setimo/1st-videos/l.4_introduction-video.mp4" >
-        <img src="img/iconos/rojo-video.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
+      <p class="text-center"><strong>1 st term</strong></p><br>     
+        <img medio="video" path="data/setimo/1st-videos/l.4_introduction-video.mp4" src="img/iconos/rojo-video.jpg" class="img-circle person" alt="Random Name" width="255" height="255">     
       <p>L-4 Introduction</p>
     </div>
 
     <div class="col-sm-2">
-      <p class="text-center"><strong>1 st term</strong></p><br>
-      <a target="_blank" href="data/setimo/1st-videos/sp.2-video.mp4" >
-        <img src="img/iconos/verde-video.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
+      <p class="text-center"><strong>1 st term</strong></p><br>      
+        <img medio="video" path="data/setimo/1st-videos/sp.2-video.mp4"  src="img/iconos/verde-video.jpg" class="img-circle person" alt="Random Name" width="255" height="255">      
       <p>Sp 2</p>
     </div>
 
     <div class="col-sm-2">
-      <p class="text-center"><strong>2 st term</strong></p><br>
-      <a target="_blank" href="data/setimo/2st-audios/l.7-which-is-more-popular.mp3" >
-        <img src="img/iconos/celeste-audio.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
+      <p class="text-center"><strong>2 st term</strong></p><br>      
+        <img medio="audio" path="data/setimo/2st-audios/l.7-which-is-more-popular.mp3"src="img/iconos/celeste-audio.jpg" class="img-circle person" alt="Random Name" width="255" height="255">      
       <p>L-7 Which is more</p>
     </div>
 
     <div class="col-sm-2">
     <p class="text-center"><strong>3 st term</strong></p><br>
-      <a target="_blank" href="data/setimo/3st-audio-my-community/l.7-audio-lesson.mp3" >
-      <img src="img/iconos/morado-audio.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-    </a>
+     <img medio="audio" path="data/setimo/3st-audio-my-community/l.7-audio-lesson.mp3"  src="img/iconos/morado-audio.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
     <p>L-7 My community</p>
     </div>
 
@@ -378,10 +369,37 @@
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
+  <!-- REvisar enlaces - se pueden quitar -->
+  
+  
   <a href="http://www.mep.go.cr/educatico" target="_blank"> Gespro Mep </a> <br>
   <a  href="https://www.w3schools.com/" target="_blank"> Bootstrap Theme Made By </a> <br>
   <a href='https://www.freepik.com/free-vector/colorful-circular-design-elements-with-space-for-text_1245647.htm'>Designed by Freepik</a>
 </footer>
+
+
+<!-- Modal -->
+<div id="modalPlayer" class="modal fade" role="dialog">
+  <div class="modal-dialog ">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Media Player</h4>
+      </div>
+      <div class="modal-body">
+        <p  id="contenedorPlayer">
+			
+		</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
 
 
 </body>

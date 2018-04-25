@@ -12,6 +12,19 @@ h3, h4 {
     color: #FF00FF;
 }
 
+.img-circle {
+	cursor:pointer;
+}
+
+#contenedorPlayer {
+	text-align: center;
+}
+
+#currentMedio{
+	height:100%;
+	width : 100%;
+}
+
 #logo {width: 70px; height: 45px;}
 
 #subtitulo {

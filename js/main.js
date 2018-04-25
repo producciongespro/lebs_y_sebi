@@ -1,8 +1,8 @@
 
-$(document).ready(function(){
-	
+$(document).ready(function(){	
+	playIntroAudio ();
+
 	addEventStopAudio();
-	
 	
 	
   // Initialize Tooltip
@@ -35,11 +35,49 @@ $(document).ready(function(){
 
 function addEventStopAudio () {
 	$(".img-circle").click(function (){
-			var tmpAudio = document.getElementById("audioInicio");
+		
+		//Detiene el audio intro
+			document.getElementById("audioInicio").pause();	
+			document.getElementById("audioInicio").currentTime=0;
+			
+			
+		//Crea el objeto audio lo renderiza y abre el modal
+			
+			pathMedio =  $(this).attr("path");
+			typeMedio = $(this).attr("medio"); 
+			
+			if (typeMedio=="audio") {
+				var tmp = $("<audio id='currentMedio' preload='true' autoplay='true' controls></audio>");
+				$(tmp).attr("src", pathMedio);		
+				$("#contenedorPlayer").html(tmp);			
+			};
+			
+			if (typeMedio=="video") {
+				var tmp = $("<video id='currentMedio' preload='true' autoplay='true' controls></video>");
+				$(tmp).attr("src", pathMedio);		
+				$("#contenedorPlayer").html(tmp);			
+			};
+			
+			
+			$("#modalPlayer").modal();
+			
+			
+			$("#modalPlayer").on('hide.bs.modal', function () {            
+			//Detiene el medio actual
+			document.getElementById("currentMedio").pause();
+			
+			//reproduce nuevamente la intro
+			document.getElementById("audioInicio").play();
+			//Limpia el contenedor del medio
+			//$("#contenedorPlayer").empty();
+    });
+		
+	})	
+}
+
+function playIntroAudio () {
+	var tmpAudio = document.getElementById("audioInicio");
 			console.log (tmpAudio);
-			tmpAudio.pause();
-	})
-	
-	
+			tmpAudio.play();
 }
 
