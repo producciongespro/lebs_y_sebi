@@ -1,8 +1,8 @@
-
+"use strict"
 $(document).ready(function(){	
 	playIntroAudio ();
 
-	addEventStopAudio();
+	addEventPlayMedia();
 	
 	
   // Initialize Tooltip
@@ -33,7 +33,7 @@ $(document).ready(function(){
   });
 })
 
-function addEventStopAudio () {
+function addEventPlayMedia () {
 	$(".img-circle").click(function (){
 		
 		//Detiene el audio intro
@@ -44,15 +44,16 @@ function addEventStopAudio () {
 		//Crea el objeto audio lo renderiza y abre el modal
 			
 			var pathMedio =  $(this).attr("path"),
-			typeMedio = $(this).attr("medio"); 
+			typeMedio = pathMedio.slice(-3);						
 			
-			if (typeMedio=="audio") {
+			
+			if (typeMedio=="mp3") {
 				var tmp = $("<audio id='currentMedio' preload='true' autoplay='true' controls></audio>");
 				$(tmp).attr("src", pathMedio);		
 				$("#contenedorPlayer").html(tmp);			
 			};
 			
-			if (typeMedio=="video") {
+			if (typeMedio=="mp4") {
 				var tmp = $("<video id='currentMedio' preload='true' autoplay='true' controls></video>");
 				$(tmp).attr("src", pathMedio);		
 				$("#contenedorPlayer").html(tmp);			
@@ -76,8 +77,7 @@ function addEventStopAudio () {
 }
 
 function playIntroAudio () {
-	var tmpAudio = document.getElementById("audioInicio");
-			console.log (tmpAudio);
+	var tmpAudio = document.getElementById("audioInicio");			
 			tmpAudio.play();
 }
 
