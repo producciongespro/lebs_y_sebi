@@ -12,6 +12,14 @@ h3, h4 {
     color: #FF00FF;
 }
 
+embed {
+  /* height: 800px; */
+}
+
+#btnSonido{
+  cursor: pointer;
+}
+
 .img-circle {
 	cursor:pointer;
 }
