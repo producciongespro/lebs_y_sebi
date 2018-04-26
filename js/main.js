@@ -77,7 +77,7 @@ function addEventPlayMedia () {
 
 			if (typeMedio=="pdf") {
 				var tmp = $("<embed id='currentMedio' src='"+ pathMedio +"' type='application/pdf' width='100%' height='100%'></embed>");
-				$(contenedorPlayer).css("height", "400px");				
+				$(contenedorPlayer).css("height", "420px");				
 				$("#contenedorPlayer").html(tmp);			
 			};
 

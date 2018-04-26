@@ -14,9 +14,11 @@ h3, h4 {
 #logo {width: 70px; height: 45px;}
 
 
-.img-circle {
+.img-circle, #btnSonido{
 	cursor:pointer;
 }
+
+
 
 #contenedorPlayer {
 	text-align: center;	
