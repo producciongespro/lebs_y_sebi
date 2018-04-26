@@ -85,8 +85,11 @@ function addEventPlayMedia () {
 					};
 					typeMedio="";
 
-					//reproduce nuevamente la intro
-					audioInicio.play();
+					
+					if (audioOn) {
+							//reproduce nuevamente la intro
+							audioInicio.play();
+					};					
 					//Limpia el contenedor del medio
 					//$("#contenedorPlayer").empty();
     	});
@@ -111,5 +114,5 @@ function muteSound(objeto) {
 				$(objeto).attr("src","img/consonido.png");
 	}
 	audioOn=!audioOn;
-	console.log(audioOn);
+	//console.log(audioOn);
 }
