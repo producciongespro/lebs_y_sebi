@@ -60,18 +60,25 @@ function addEventPlayMedia () {
 			if (typeMedio=="mp3") {
 				var tmp = $("<audio id='currentMedio' preload='true' autoplay='true' controls></audio>");
 				$(tmp).attr("src", pathMedio);
+				
+				$(contenedorPlayer).css("height", "");	
+				
 				$("#contenedorPlayer").html(tmp);
 			};
 
 			if (typeMedio=="mp4") {
 				var tmp = $("<video id='currentMedio' preload='true' autoplay='true' controls></video>");
 				$(tmp).attr("src", pathMedio);
+				
+				$(contenedorPlayer).css("height", "");	
+				
 				$("#contenedorPlayer").html(tmp);
 			};
 
 			if (typeMedio=="pdf") {
-				var tmp = $("<embed id='currentMedio' src='"+ pathMedio +"' type='application/pdf' width='800' height='600'></embed>");
-				$("#contenedorPlayer").html(tmp);
+				var tmp = $("<embed id='currentMedio' src='"+ pathMedio +"' type='application/pdf' width='100%' height='100%'></embed>");
+				$(contenedorPlayer).css("height", "400px");				
+				$("#contenedorPlayer").html(tmp);			
 			};
 
 
