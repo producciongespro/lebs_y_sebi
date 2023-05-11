@@ -78,7 +78,8 @@ function addEventPlayMedia () {
 			if (typeMedio=="pdf") {
 				var tmp = $("<embed id='currentMedio' src='"+ pathMedio +"' type='application/pdf' width='100%' height='100%'></embed>");
 				$(contenedorPlayer).css("height", "420px");				
-				$("#contenedorPlayer").html(tmp);			
+				$("#contenedorPlayer").html(tmp);
+				$("#pLinkDirecto").html("Trouble downloading?  <a href='"+ pathMedio +"' >  Try here. </a>"    );				
 			};
 
 
