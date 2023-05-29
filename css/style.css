@@ -18,6 +18,15 @@ h3, h4 {
 	cursor:pointer;
 }
 
+.imagen{
+    transform: scale(var(--escala, 1));
+    transition: transform 0.25s;
+  }
+  .imagen:hover{
+    --escala: 1.2;
+    cursor:pointer;
+  }
+
 
 
 #contenedorPlayer {
