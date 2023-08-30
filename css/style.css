@@ -14,6 +14,19 @@ h3, h4 {
 #logo {width: 70px; height: 45px;}
 
 
+
+.img-preview {
+
+width: 20em; 
+height: auto;
+
+
+}
+
+
+
+
+
 .img-circle, #btnSonido{
 	cursor:pointer;
 }
